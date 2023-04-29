@@ -8,12 +8,13 @@ from telegram.replykeyboardmarkup import ReplyKeyboardMarkup
 from telegram.ext import ConversationHandler
 import openpyxl
 
-cred = credentials.Certificate("kit-pro-f4b0d-firebase-adminsdk-mhzrf-8a07acab1c.json")
+cred = credentials.Certificate("groove-mark-bot-firebase-adminsdk-z7wmh-c775561056.json")
 firebase_admin.initialize_app(cred, {
     "databaseURL": "https://kit-pro-f4b0d-default-rtdb.firebaseio.com/"
 })
 
-bot = Bot(token="6109952194:AAEFEucsgBgQNLIfaSAvzi0n852KM8Y0NZg")
+BOT_TOKEN = "6096228474:AAES2m4LdoUBfMcwYYY9bnlr5f51f55ptRQ"
+bot = Bot(token=BOT_TOKEN)
 
 
 def menu_button(update,context):
