@@ -102,7 +102,7 @@ def collect_message(update, context):
                 bot.send_photo(chat_id=chat_id, photo=open('binance_1.jpg', 'rb'))
                 bot.send_photo(chat_id=chat_id, photo=open('binance_2.jpg', 'rb'))
             else:
-                bot.sendMessage(chat_id=chat_id, text=f"Binance ID: {get}")
+                bot.sendMessage(chat_id=chat_id, text=f"Binance ID: {get['binance']}")
         elif "binance " in text.lower():
             text = text.replace("binance ", "")
             if text.isdigit():
