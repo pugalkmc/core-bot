@@ -16,7 +16,7 @@ def start(update, context):
     message = update.message
     chat_id = message.chat_id
     username = message.from_user.username
-    current_time = datetime.now().strftime("%d-%m-%Y")
+    current_time = datetime.datetime.now().strftime("%d-%m-%Y")
     find_people = db.reference(f'peoples/{chat_id}').get() or {}
     if username is None:
         bot.sendMessage(chat_id=chat_id, text=f"Hello @{username}\n"
