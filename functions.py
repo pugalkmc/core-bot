@@ -24,3 +24,11 @@ def menu_button(update,context):
     bot.sendMessage(chat_id=chat_id,text="Use below buttons for quick access",
                     reply_markup=ReplyKeyboardMarkup(reply_keyboard, resize_keyboard=True, one_time_keyboard=True),
                     reply_to_message_id=update.message.message_id)
+
+def settings(update, context):
+    chat_id = update.message.chat_id
+    text = update.message.text
+    reply_keyboard = [["twitter", "binance", "discord"], ['main menu']]
+    bot.sendMessage(chat_id=chat_id, text="Choose options",
+                    reply_markup=ReplyKeyboardMarkup(reply_keyboard, resize_keyboard=True, one_time_keyboard=True),
+                    reply_to_message_id=update.message.message_id)
