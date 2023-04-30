@@ -142,7 +142,7 @@ def collect_message(update, context):
 
 
 def main():
-    updater = Updater(token="6109952194:AAEFEucsgBgQNLIfaSAvzi0n852KM8Y0NZg", use_context=True)
+    updater = Updater(token=BOT_TOKEN, use_context=True)
     dp = updater.dispatcher
     create = ConversationHandler(
         entry_points=[CommandHandler('create_task', create_task)],
